@@ -1,0 +1,42 @@
+---
+import clock from '../images/icon-clock.svg';
+import view from '../images/icon-view.svg';
+import necro from '../images/icon-ethereum.svg'
+
+interface Props {
+    title: string,
+    text: string,
+    number: string,
+    days: string,
+    name: string,
+    imgcontent: string,
+    imgavatar: string
+}
+const {title, text, number, days, name, imgcontent, imgavatar} = Astro.props
+---
+
+<div class="p-5 bg-pvdblue2 rounded-lg flex flex-col gap-4 lg:shadow-xl">
+    <div class="rounded-lg relative">
+        <img class="rounded-lg cursor-pointer" src={imgcontent} alt="">
+         <a href="#" class="absolute w-full h-full top-0 left-0 transition duration-500 opacity-0 hover:opacity-100 rounded-lg flex justify-center items-center hover:bg-pcyan/40">
+            <img class="" src={view.src} alt="">
+         </a>
+    </div>
+    <a class="w-max text-xl hover:text-pcyan transition duration-500" href="#">{title}</a>
+    <p class="text-psblue font-light">{text}</p>
+    <ul class="justify-between flex">
+        <li class="flex gap-3 items-center">
+            <img src={necro.src} alt="">
+            <p class="text-pcyan">{number}</p>
+        </li>
+        <li class="flex  items-center gap-2">
+            <img src={clock.src} alt="">
+            <p>{days}</p>
+        </li>
+    </ul>
+    <hr class="h-0.5 bg-pvdblue3 border-t-0">
+    <div class="flex items-center gap-3 text-sm font-light">
+        <img class="size-10 border-pwhite border rounded-full" src={imgavatar} alt="">
+        <p class="text-psblue">Creation of <a class="text-pwhite hover:text-pcyan transition duration-500" href="#">{name}</a></p>
+    </div>
+</div>
