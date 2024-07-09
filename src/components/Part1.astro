@@ -18,9 +18,10 @@ const {title, text, number, days, name, imgcontent, imgavatar} = Astro.props
 <div class="p-5 bg-pvdblue2 rounded-lg flex flex-col gap-4 lg:shadow-xl">
     <div class="rounded-lg relative">
         <img class="rounded-lg cursor-pointer" src={imgcontent} alt="">
-         <a href="#" class="absolute w-full h-full top-0 left-0 transition duration-500 opacity-0 hover:opacity-100 rounded-lg flex justify-center items-center hover:bg-pcyan/40">
+         <div  class="absolute w-full h-full top-0 left-0 transition duration-500 opacity-0 hover:opacity-100 rounded-lg flex justify-center items-center hover:bg-pcyan/40 cursor-pointer">
             <img class="" src={view.src} alt="">
-         </a>
+         </div>
+         
     </div>
     <a class="w-max text-xl hover:text-pcyan transition duration-500" href="#">{title}</a>
     <p class="text-psblue font-light">{text}</p>
